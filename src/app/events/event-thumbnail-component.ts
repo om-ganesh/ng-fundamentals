@@ -5,9 +5,9 @@ import {Component, Input, Output, EventEmitter} from '@angular/core'
     templateUrl: './event-thumbnail-component.html'
 })
 export class EventThumbnailComponent{
-    @Input() event: any
-    @Output() eventClick = new EventEmitter()
-
+    @Input() event: any;
+    @Output() eventClick = new EventEmitter();
+    someProperty:string = "Test Value";
     handleClick() {
         this.eventClick.emit(this.event.name)
     }
