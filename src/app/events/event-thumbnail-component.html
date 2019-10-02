@@ -1,11 +1,11 @@
 <div class="well hoverwell thumbnail">
-        <h2>{{event.name}}</h2>
-        <div>Date: {{event.date}}</div>
-        <div>Time: {{event.time}}</div>
-        <div>Price: ${{event.price}}</div>
-        <div>
-            <span>Location: {{event.location.address}}</span>
-            <span>Location: {{event.location.city}}, {{event.location.country}}</span>
-        </div>
-        <button class='btn btn-primary' (click)="handleClick()">Register</button>
+    <h2>{{eventInput.name}}</h2>
+    <div>Date: {{eventInput.date}}</div>
+    <div>Time: {{eventInput.time}}</div>
+    <div>Price: ${{eventInput.price}}</div>
+    <div>
+        <span>Location: {{eventInput.location.address}}</span>
+        <span class="pad-left"> {{eventInput.location.city}}, {{eventInput.location.country}}</span>
     </div>
+    <button class='btn btn-primary' (click)="handleClick()">Register</button>
+</div>

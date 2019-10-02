@@ -1,14 +1,14 @@
 <div>
-        <h1>Coming events page...</h1>
+        <h1>Upcoming Angular events</h1>
         <hr>
         <!--
-        This child component has 'event' input parameter and we are passing eventObject to child from here/parent
-        When 'eventClick' event happens in this child component, fire handleEventClicked on my component
-        Add a reference variable #thumbnail
+        Iterate along eventObjects and get eventItem in each loop
+        Use the eventItem to bind to 'event' property and pass item in handleEventClicked method
         -->
-        <event-thumbnail #thumbnail [event]="eventObject" (eventClick)="handleEventClicked($event)"></event-thumbnail>
-        <div>
-            <button class='btn btn-primary' (click)="thumbnail.logRefVar('hello')">Console Me</button>
+        <div class="row">
+            <div class="col-md-5" *ngFor="let eventItem of eventObjects" >
+                <event-thumbnail [eventInput]="eventItem" 
+                (eventClick)="handleEventClicked(eventItem)"></event-thumbnail>
+            </div>
         </div>
-        <h3>{{thumbnail.someProperty}}</h3>
     </div>
