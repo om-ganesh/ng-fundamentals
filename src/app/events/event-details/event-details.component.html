@@ -1,0 +1,24 @@
+<div class="container">
+        <img [src]="eventObject?.imageUrl" [alt]="eventObject?.name" class='event-image'>
+      
+        <div class="row">
+          <div class="col-md-11">
+            <h2>{{eventObject?.name}} </h2>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="col-md-6">
+            <div><strong>Date:</strong> {{eventObject?.date}}</div>
+            <div><strong>Time:</strong> {{eventObject?.time}}</div>
+            <div><strong>Price:</strong> ${{eventObject?.price}}</div>
+          </div>
+          <div class="col-md-6">
+            <address>
+              <strong>Address:</strong><br />
+              {{eventObject?.location?.address}}<br />
+              {{eventObject?.location?.city}}, {{eventObject?.location?.country}}
+            </address>
+          </div>
+        </div>
+      </div>
