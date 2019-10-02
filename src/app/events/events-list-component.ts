@@ -87,7 +87,7 @@ export class EventsListComponent {
           id: 2,
           name: 'ng-nl',
           date: '4/15/2037',
-          time: '9:00 am',
+          time: '8:00 am',
           price: 950.00,
           imageUrl: '/assets/images/ng-nl.png',
           onlineOnly: 'https://webex.url',

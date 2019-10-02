@@ -7,6 +7,8 @@ import {Component, Input, Output, EventEmitter} from '@angular/core'
     .thumbnail {min-height: 210px;}
     .pad-left {margin-left: 10px;}
     .well div {color: #bbb;}
+    .green { color: #003300 !important}
+    .bold { font-weight: bold}
     `]
 })
 export class EventThumbnailComponent{
@@ -17,6 +19,12 @@ export class EventThumbnailComponent{
         this.eventClick.emit(this.eventInput.name)
     }
 
+    getEventTimeClass() {
+        if( this.eventInput && this.eventInput.time === '8:00 am') {
+            return ['green', 'bold'];
+        }
+        return [];
+    }
     logRefVar(data) {
         console.log("Printing using reference variable from parent: " + data);
     }
