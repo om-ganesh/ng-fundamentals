@@ -3,9 +3,12 @@
     <div>Date: {{eventInput.date}}</div>
     <div>Time: {{eventInput.time}}</div>
     <div>Price: ${{eventInput.price}}</div>
-    <div>
-        <span>Location: {{eventInput.location.address}}</span>
-        <span class="pad-left"> {{eventInput.location.city}}, {{eventInput.location.country}}</span>
+    <div *ngIf="eventInput.location">
+        <span>Location: {{eventInput.location?.address}}</span>
+        <span class="pad-left"> {{eventInput.location?.city}}, {{eventInput.location?.country}}</span>
+    </div>
+    <div *ngIf="eventInput.onlineOnly">
+        <span>Online URL: {{eventInput.onlineOnly}}</span>
     </div>
     <button class='btn btn-primary' (click)="handleClick()">Register</button>
 </div>

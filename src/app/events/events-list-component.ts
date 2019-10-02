@@ -10,7 +10,6 @@ export class EventsListComponent {
           id: 1,
           name: 'Angular Connect',
           date: '9/26/2036',
-          time: '10:00 am',
           price: 599.99,
           imageUrl: '/assets/images/angularconnect-shield.png',
           location: {
@@ -91,11 +90,7 @@ export class EventsListComponent {
           time: '9:00 am',
           price: 950.00,
           imageUrl: '/assets/images/ng-nl.png',
-          location: {
-            address: 'The NG-NL Convention Center & Scuba Shop',
-            city: 'Amsterdam',
-            country: 'Netherlands'
-          },
+          onlineOnly: 'https://webex.url',
           sessions: [
             {
               id: 1,
@@ -152,7 +147,6 @@ export class EventsListComponent {
           price: 759.00,
           imageUrl: '/assets/images/ng-conf.png',
           location: {
-            address: 'The Palatial America Hotel',
             city: 'Salt Lake City',
             country: 'USA'
           },
