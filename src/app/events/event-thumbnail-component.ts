@@ -11,4 +11,8 @@ export class EventThumbnailComponent{
     handleClick() {
         this.eventClick.emit(this.event.name)
     }
+
+    logRefVar(data) {
+        console.log("Printing using reference variable from parent: " + data);
+    }
 }

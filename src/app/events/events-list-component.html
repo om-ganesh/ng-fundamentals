@@ -4,6 +4,10 @@
         <!--
         This child component has 'event' input parameter and we are passing eventObject to child from here/parent
         When 'eventClick' event happens in this child component, fire handleEventClicked on my component
+        Add a reference variable #thumbnail
         -->
-        <event-thumbnail [event]="eventObject" (eventClick)="handleEventClicked($event)"></event-thumbnail>
+        <event-thumbnail #thumbnail [event]="eventObject" (eventClick)="handleEventClicked($event)"></event-thumbnail>
+        <div>
+            <button class='btn btn-primary' (click)="thumbnail.logRefVar('hello')">Console Me</button>
+        </div>
     </div>
