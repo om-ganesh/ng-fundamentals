@@ -19,4 +19,7 @@ export class EventsListComponent {
         } 
     }
 
+    handleEventClicked(data:string) {
+        console.log('Event selected: ' + data);
+    }
 }

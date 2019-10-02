@@ -1,6 +1,9 @@
 <div>
         <h1>Coming events page...</h1>
         <hr>
-        <!--[xyz] ='obj' => this component has xyz input parameter and we are passing obj to it-->
-        <event-thumbnail [event]="eventObject"></event-thumbnail>
+        <!--
+        This child component has 'event' input parameter and we are passing eventObject to child from here/parent
+        When 'eventClick' event happens in this child component, fire handleEventClicked on my component
+        -->
+        <event-thumbnail [event]="eventObject" (eventClick)="handleEventClicked($event)"></event-thumbnail>
     </div>
