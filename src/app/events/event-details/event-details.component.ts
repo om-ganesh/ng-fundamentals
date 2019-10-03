@@ -15,8 +15,8 @@ export class EventDetailsComponent implements OnInit {
     }
 
     ngOnInit() {
-        let eventId:number = this.route.snapshot.params['id'];
-        console.log(this.eventService.getEvent(eventId));
+        //VVI: '+' will convert the route string parameter to number
+        let eventId:number = +this.route.snapshot.params['id'];
         this.eventObject = this.eventService.getEvent(eventId);
     }
 }

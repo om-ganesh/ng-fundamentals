@@ -14,9 +14,8 @@ import {Component, Input, Output, EventEmitter} from '@angular/core'
 export class EventThumbnailComponent{
     @Input() eventInput: any;
     @Output() eventClick = new EventEmitter();
-    someProperty:string = "Test Value";
     handleClick() {
-        this.eventClick.emit(this.eventInput.name)
+        this.eventClick.emit(this.eventInput)
     }
 
     getEventTimeClass() {

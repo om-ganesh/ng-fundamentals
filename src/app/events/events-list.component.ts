@@ -18,6 +18,7 @@ export class EventsListComponent implements OnInit {
     }
 
     handleEventClicked(data:any) {
+        console.log(data);
         this.toastrService.success(data.name);
     }
 }
