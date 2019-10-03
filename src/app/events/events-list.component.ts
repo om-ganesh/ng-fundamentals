@@ -6,11 +6,13 @@ import { ToastrService } from '../common/toastr.service'
     templateUrl: './events-list.component.html'
 })
 export class EventsListComponent implements OnInit {
-    eventObjects: any[];
+    eventObjects: any;
     constructor(private eventService: EventService, private toastrService: ToastrService) {}
 
     ngOnInit() {
-      this.eventObjects = this.eventService.getEvents();
+      this.eventService.getEvents().subscribe(
+          events => { this.eventObjects = events }
+      );
     }
 
     handleEventClicked(data:any) {

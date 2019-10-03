@@ -1,9 +1,13 @@
 import { Injectable } from '@angular/core';
-
+import {Subject} from 'rxjs'
 @Injectable()
 export class EventService {
     getEvents() {
-        return Events;
+        let subject = new Subject();
+        setTimeout(
+            () => {subject.next(Events); subject.complete();}
+            , 2000) //Puting 2 secs for just demo on async call
+        return subject; //Now we are returning observable instead of data[]
     }
 
     getEvent(id:number) {
