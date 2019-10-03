@@ -15,6 +15,10 @@ import { EventDetailsComponent } from './events/event-details/event-details.comp
 import { CreateEventComponent } from './events/create-event.component';
 import {EventRouteActivatorService} from './events/event-details/event-route-activator.service';
 import { EventsListResolverService } from './events/events-list-resolver.service';
+import {SessionListComponent} from './events/event-details/session-list.component';
+import { CreateSessionComponent } from './events/event-details/create-session.component';
+
+
 //TODO: The barrels for common imports not working
 // import {
   // EventService
@@ -33,7 +37,9 @@ import { EventsListResolverService } from './events/events-list-resolver.service
     NavBarComponent,
     EventDetailsComponent,
     CreateEventComponent,
-    Error404Component
+    Error404Component,
+    SessionListComponent,
+    CreateSessionComponent
   ],
   imports: [
     BrowserModule,

@@ -7,10 +7,12 @@ import {ActivatedRoute} from '@angular/router'
     styles:[`
         .container: {padding-left:20px; padding-right:20px;}
         .event-image {height:100px}
+        a {cursor:pointer}
     `]
 })
 export class EventDetailsComponent implements OnInit {
     eventObject:any;
+    addMode:boolean;
     constructor(private eventService : EventService, private route:ActivatedRoute) {
     }
 
@@ -18,5 +20,23 @@ export class EventDetailsComponent implements OnInit {
         //VVI: '+' will convert the route string parameter to number
         let eventId:number = +this.route.snapshot.params['id'];
         this.eventObject = this.eventService.getEvent(eventId);
+    }
+
+    addSession() {
+        this.addMode=true;
+    }
+
+    saveSessionFromChild(data) {
+        console.log(data);
+        const nextId = Math.max.apply(null, this.eventObject.sessions.map(s=> s.id));
+
+        data.Id = nextId +1;
+        this.eventObject.sessions.push(data);
+        this.eventService.updateEvent(this.eventService);
+        this.addMode = false;
+    }
+
+    cancelAddSessionFromChild() {
+        this.addMode = false;
     }
 }
