@@ -1,20 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
+import { appRoutes } from 'src/routes';
 import { AppComponent } from './app.component';
+import { NavBarComponent} from './navbar/navbar.component';
+import { ToastrService } from './common/toastr.service';
+import { Error404Component } from './errors/Error404.component';
+
 import { EventsListComponent } from './events/events-list.component';
 import { EventThumbnailComponent } from './events/event-thumbnail.component';
-import { NavBarComponent} from './navbar/navbar.component';
 import { EventService } from './events/shared/event.service';
-import { ToastrService } from './common/toastr.service';
 import { EventDetailsComponent } from './events/event-details/event-details.component';
-import { RouterModule } from '@angular/router';
-import { appRoutes } from 'src/routes';
 import { CreateEventComponent } from './events/create-event.component';
-import { Error404Component } from './errors/Error404.component';
 import {EventRouteActivatorService} from './events/event-details/event-route-activator.service';
 import { EventsListResolverService } from './events/events-list-resolver.service';
-
+//TODO: The barrels for common imports not working
+// import {
+  // EventService
+  // ,EventsListComponent
+  // ,EventThumbnailComponent
+  // ,EventDetailsComponent
+  // ,CreateEventComponent
+  // ,EventRouteActivatorService
+  // ,EventsListResolverService 
+// } from './events/index';
 @NgModule({
   declarations: [
     AppComponent,
