@@ -17,6 +17,7 @@ import {EventRouteActivatorService} from './events/event-details/event-route-act
 import { EventsListResolverService } from './events/events-list-resolver.service';
 import {SessionListComponent} from './events/event-details/session-list.component';
 import { CreateSessionComponent } from './events/event-details/create-session.component';
+import { LoginComponent } from './user/login.component';
 
 
 //TODO: The barrels for common imports not working
