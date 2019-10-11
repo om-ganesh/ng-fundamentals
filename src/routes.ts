@@ -6,6 +6,7 @@ import { EventDetailsComponent } from './app/events/event-details/event-details.
 import { CreateEventComponent } from './app/events/create-event.component';
 import { EventRouteActivatorService } from './app/events/event-details/event-route-activator.service';
 import { EventsListResolverService } from './app/events/events-list-resolver.service';
+import { LoginComponent } from './app/user/login.component';
 // TODO: The barrels is not working
 // import {
 //     EventsListComponent
