@@ -1,3 +1,7 @@
+Learning Angular Fundamentals
+Course : https://app.pluralsight.com/library/courses/angular-fundamentals/ 
+Author: https://github.com/jim-cooper
+
 # NgFundamentals
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2.
