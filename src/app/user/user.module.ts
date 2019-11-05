@@ -13,7 +13,8 @@ import {FormsModule} from '@angular/forms'
     ],
     imports: [
         RouterModule.forChild(userRoutes),
-        FormsModule
+        FormsModule,
+        CommonModule
     ],
     providers:[]
 })
